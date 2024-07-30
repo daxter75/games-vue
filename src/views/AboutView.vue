@@ -21,7 +21,7 @@ const externalLinks: Record<string, string> = {
             </a>
         </div>
         <div class="mt-6">
-            Made with <span class="text-red-600">&hearts;</span>.
+            Made with <span class="text-red-600">&hearts;</span> 2024.
         </div>
         <div class="mt-6">
             <a :href="externalLinks.vuejs" target="_blank" class="h-[36px] bg-blue-100 hover:bg-blue-200 text-gray-700 px-4 py-2 rounded-lg text-center text-sm">

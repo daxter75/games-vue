@@ -1,6 +1,11 @@
 <script setup lang="ts">
   import logo from '@/assets/img/logo.png'
-  import { RouterLink } from 'vue-router';
+  import { RouterLink, useRoute } from 'vue-router';
+
+  const isActiveLink = (routePath:string) => {
+    const route = useRoute()
+    return route.path === routePath
+  }
 </script>
 
 <template>
@@ -20,18 +25,27 @@
               <div class="flex space-x-2">
                 <RouterLink
                   to="/"
-                  class="text-white bg-blue-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">
-                  Home
+                  :class="[
+                    'btn',
+                    isActiveLink('/') ? 'btnActive' : 'btnHover'
+                    ]"
+                >Home
                 </RouterLink>
                 <RouterLink
                   to="/games"
-                  class="text-white hover:bg-blue-900 hover:text-white rounded-md px-3 py-2">
-                  Games
+                  :class="[
+                    'btn',
+                    isActiveLink('/games') ? 'btnActive' : 'btnHover'
+                    ]"
+                >Games
                 </RouterLink>
                 <RouterLink
                   to="/about"
-                  class="text-white hover:bg-blue-900 hover:text-white rounded-md px-3 py-2">
-                  About
+                  :class="[
+                    'btn',
+                    isActiveLink('/about') ? 'btnActive' : 'btnHover'                    
+                    ]"
+                >About
                 </RouterLink>
               </div>
             </div>
@@ -40,3 +54,16 @@
       </div>
     </nav>
 </template>
+
+<style lang="postcss" scoped>
+.btn {
+  @apply text-white rounded-md px-3 py-2
+}
+.btnActive {
+  @apply bg-blue-900 cursor-default;
+}
+
+.btnHover {
+  @apply hover:bg-blue-900 hover:text-white;
+}
+</style>
