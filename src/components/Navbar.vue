@@ -64,6 +64,6 @@
 }
 
 .btnHover {
-  @apply hover:bg-blue-900 hover:text-white;
+  @apply hover:bg-blue-900 hover:text-blue-200 cursor-pointer;
 }
 </style>

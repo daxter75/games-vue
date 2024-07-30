@@ -10,7 +10,7 @@ const externalLinks: Record<string, string> = {
 </script>
 
 <template>
-    <div class="container block text-center mt-6">
+    <div class="container mx-auto block text-center mt-6">
         <h1 class="text-2xl font-black">
             Featured Games
             <span class="text-sm font-light">v0.1</span>

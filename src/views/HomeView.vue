@@ -5,5 +5,5 @@ import GameListings from '@/components/GameListings.vue';
 
 <template>
   <Hero />
-  <GameListings :limit="6" title="Most popular Games" />
+  <GameListings :limit="6" title="Latest Games" />
 </template>
